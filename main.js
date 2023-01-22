@@ -9,6 +9,7 @@ let navlist = document.querySelector('.navlist');
 menu.onclick = () => {
 	menu.classList.toggle('bx-x');
 	navlist.classList.toggle('open');
+	header.classList.toggle('sticky');
 };
 
 window.onscroll = () => {

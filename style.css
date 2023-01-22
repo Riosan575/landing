@@ -18,6 +18,15 @@
 body{
     background: #fff;
 }
+h1{
+    color: #eeaa0d;
+}
+hr{
+    border-style: none;
+    color: #f6e202;
+    border: 1px solid #f6e202;
+    border-color: #F6E202;
+}
 header{
     position: fixed;
     width: 100%;
@@ -33,7 +42,7 @@ header{
     transition: all .45s ease;
 }
 .logo{
-    color: white;
+    color: #eeaa0d;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -58,7 +67,7 @@ header ul li a{
 }
 header ul li a:hover,
 header ul li a.active{
-    color: #FFF101;
+    color: #eeaa0d;
 }
 #menu-icon{
     font-size: 35px;
@@ -75,7 +84,10 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #eeaa0d;
+    background-image: url("https://static.nationalgeographicla.com/files/styles/image_3200/public/01perumine.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -108,9 +120,9 @@ section{
     margin-bottom: 40px;
 }
 header.sticky{
-    background: #eeaa0d;
-    border-bottom: 1px solid #eeaa0d;
+    background: #2a2a2a;
     padding: 12px 15%;
+    transition: all .45s;
 }
 .nosotros-container{
     display: grid;
@@ -130,6 +142,9 @@ header.sticky{
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 2.5rem;
     margin-top: 5rem;
+}
+.nosotros-content h1{
+    color: #2a2a2a;
 }
 .valores{
     background-color: #ffffff;
@@ -159,6 +174,73 @@ header.sticky{
 .box:hover{
     transform: translateY(-8px);
     cursor: pointer;
+}
+.compromisos-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+}
+.compromisos-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+.compromisos-content span{
+    font-size: 20px;
+}
+.compromisos-img img{
+    max-width: 530px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+}
+.container-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+.box-servicios{
+    width: 280px;
+    height: 320px;
+    background: #F4F5F8;
+    transition: all .45s;
+    border-radius: 10px;
+}
+.box-servicios h1{
+    width: 100%;
+    margin-top: 70px;
+    padding: 20px;
+    color: #2a2a2a;    
+    transition: all .45s;
+    text-transform: uppercase;
+}
+.box-servicios h1 span{
+    color: #686A6F;
+    padding-right: 40px;
+    transition: all .45s;
+}
+.box-servicios p{
+    padding: 20px;
+    color: #686A6F;
+    transition: all .45s;
+}
+.box-servicios:hover{
+    background: #2a2a2a;
+    transform: translateY(-8px);
+}
+.box-servicios:hover h1,
+.box-servicios:hover span,
+.box-servicios:hover p{
+    color: #eeaa0d;
 }
 .contacto{
     background-image: url("img/5.jpeg");
@@ -263,7 +345,7 @@ header.sticky{
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    background: #eeaa0d;
+    background: #2a2a2a;
     position: relative;
 }
 .last-text p{
@@ -274,8 +356,8 @@ header.sticky{
     padding: 10px;
     border-radius: 8px;
     font-size: 20px;
-    color: #eeaa0d;
-    background: white;
+    color: #2a2a2a;
+    background: #eeaa0d;
 }
 @media (max-width: 1480px) {
     header{
@@ -342,7 +424,7 @@ header.sticky{
         left: 0;
         display: flex;
         flex-direction: column;
-        background: #fcb81b;
+        background: #2a2a2a;
         text-align: left;
         transition: all .45s ease;
     }
