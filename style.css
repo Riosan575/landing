@@ -17,6 +17,7 @@
 }
 body{
     background: #fff;
+    overflow-x: hidden;
 }
 h1{
     color: #eeaa0d;
@@ -88,9 +89,23 @@ section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.home-img{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+}
+.home-img img{
+    max-width: 350px;
+    width: 100%;
+    height: 350px;
 }
 .slide{
     margin-bottom: 20px;
@@ -104,6 +119,7 @@ section{
 }
 .home-text h2{
     color: var(--text-color);
+    font-size: 3rem;
     font-weight: 700;
 }
 .home-text h3{
@@ -328,6 +344,95 @@ header.sticky{
     color: #2a2a2a;
     background: #eeaa0d;
 }
+
+.cont{
+    padding: 160px 15% 120px;
+
+  background-color: var(--bg-color);
+}
+.swiper{
+    margin: 50px 20px 50px 20px;
+    width: 30%;
+    height: 60%;
+  }
+  
+.swiper-wrapper{
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
+}
+  
+.card{
+    width: 20em;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    border: 1px solid #eeaa0d;
+    padding: 2em 1em;
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    margin: 0 2em;
+}
+  
+.swiper-slide:not(.swiper-slide-active){
+    filter: blur(1px);
+}
+  
+.card__image{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid var(--color);
+    padding: 3px;
+    margin-bottom: 2em;
+}
+  
+.card__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.card__content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.card__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+}
+  
+.card__name{
+    color: var(--color);
+}
+  
+.card__text{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+  
+.card__btn{
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+}
 @media (max-width: 1480px) {
     header{
         padding: 12px 2.5%;
@@ -356,6 +461,39 @@ header.sticky{
     }
     .home .quienes{
         font-size: 20px;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #2a2a2a;
+        text-align: left;
+        transition: all .45s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+    }
+    .navlist a:hover{
+        color: white;
+    }
+    .navlist a.active{
+        color: var(--text-color);
+    }
+    .navlist.open{
+        top: 100%;
+    }
+    .swiper{
+        width: 60%;
     }
 }
 @media (max-width: 920px){
@@ -398,36 +536,30 @@ header.sticky{
     .map{
         margin-top: 5rem;
     }
+    .swiper{
+        margin: 50px 20px 50px 20px;
+        width: 100%;
+        height: 60%;
+    }
+    .home{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
-@media (max-width: 820px){
-    #menu-icon{
-        display: block;
+@media (max-width: 768px){
+    .swiper{
+        width: 60%;
     }
-    .navlist{
-        position: absolute;
-        top: -1000px;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        background: #2a2a2a;
-        text-align: left;
-        transition: all .45s ease;
+}
+@media (max-width: 425px){
+    .home-text h2{
+        font-size: 2rem;
     }
-    .navlist a{
-        display: block;
-        margin: 17px;
-        font-size: 20px;
-        transition: all .45s ease;
-        color: var(--text-color);
+    .home-img img{
+        width: 200px;
+        height: 200px;
     }
-    .navlist a:hover{
-        color: white;
-    }
-    .navlist a.active{
-        color: var(--text-color);
-    }
-    .navlist.open{
-        top: 100%;
+    .swiper{
+        width: 100%;
     }
 }

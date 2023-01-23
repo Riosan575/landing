@@ -9,7 +9,7 @@ let navlist = document.querySelector('.navlist');
 menu.onclick = () => {
 	menu.classList.toggle('bx-x');
 	navlist.classList.toggle('open');
-	header.classList.toggle('sticky');
+	header.classList.toggle('sticky', 'sticky');
 }
 
 window.onscroll = () => {
@@ -22,6 +22,7 @@ const nosotros = document.querySelector('.nosotros');
 const valo = document.querySelector('.valo');
 const compro = document.querySelector('.compro');
 const serv = document.querySelector('.serv');
+const equipo = document.querySelector('.equipo');
 const contact = document.querySelector('.contact');
 const tops = document.querySelector('.top');
 
@@ -31,6 +32,7 @@ tops.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.remove('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.remove('active');
 }
 
@@ -40,6 +42,7 @@ inicio.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.remove('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.remove('active');
 }
 
@@ -49,6 +52,7 @@ nosotros.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.remove('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.remove('active');
 }
 
@@ -58,6 +62,7 @@ valo.onclick = () => {
 	valo.classList.toggle('active');
 	compro.classList.remove('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.remove('active');
 }
 
@@ -67,6 +72,7 @@ compro.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.toggle('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.remove('active');
 }
 
@@ -76,6 +82,17 @@ serv.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.remove('active');
 	serv.classList.toggle('active');
+	equipo.classList.remove('active');
+	contact.classList.remove('active');
+}
+
+equipo.onclick = () => {
+	inicio.classList.remove('active');
+	nosotros.classList.remove('active');
+	valo.classList.remove('active');
+	compro.classList.remove('active');
+	serv.classList.remove('active');
+	equipo.classList.toggle('active');
 	contact.classList.remove('active');
 }
 
@@ -85,5 +102,6 @@ contact.onclick = () => {
 	valo.classList.remove('active');
 	compro.classList.remove('active');
 	serv.classList.remove('active');
+	equipo.classList.remove('active');
 	contact.classList.toggle('active');
 }
