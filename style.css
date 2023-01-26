@@ -199,6 +199,7 @@ header.sticky{
     margin-bottom: 20px;
 }
 .compromisos-content{
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 2.5rem;
